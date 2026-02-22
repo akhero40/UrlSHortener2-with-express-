@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+       <form action="/" method="post" id="shortenForm">
+        <label for="url">Enter the URL: 
+            <input type="text" name="url" id="url">
+        </label>
+        <br>
+        
+        <label for="shorten">Shortened Code for URL: 
+            <input type="text" name="shorten" id="shorten">
+        </label><br>
+        <button type="submit">Shortened</button>
+    </form>
+        <h2>ShortenURL</h2>
+            <ul>
+                {{shoten-code}}
+            </ul>
+        
+    </div>
+    <script>
+  document.getElementById('shortenForm').addEventListener('submit', function(e) {
+    const shorten = document.getElementById('shorten').value;
+    if (shorten.trim() === "") {
+      alert("Enter a short code, dammit!");
+      e.preventDefault(); // Stop form submission
+    }
+  });
+</script>
+</body>
+</html>
